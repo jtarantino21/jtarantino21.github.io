@@ -1,5 +1,128 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .home {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px; 
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    
+    html, body {
+        height: 100%;
+    }
+    
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: table;
+        text-align: center;
+    }
+    .parent > .child {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+</style>
+</head>
     <body>
-        <h1>Transaction</h1>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="../">Home</a>
+          <a href="./fig.html">Fig- Software Developer</a>
+          <a href="./bundl.html">BundL - Cofounder</a>
+          <a href="./giftCardTracker.html">Gift Card Tracker</a>
+          <a href="">Transaction Predictions Algorithm</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+        <h1 style="text-align: center">Transaction Predictions Algorithm</h1>
+        <h2>Role:</h2>
+        <p style="font-size:25px">Co-Developer</p>
+        <h2>Summary</h2>
+        <p style="font-size: 25px">Note: this algorithm is still a work in progress, but it's been incredibly fun writing so I wanted to include it as I worked on it. <br><br> The goal of this algorithm is to answer the question: for a given user on a given day, what is the percent chance of them making a transaction at location X.</p>
+        
+        <h2>Shape: </h2>
+        <p style="font-size: 25px">The algorithm predicts a confidence level that a user will make a transaction at location Y by computing the weighted average of categorical analysis.These categories weights adjust and learn depending on the outcome of the algorithms results. Meaning if a historical analysis proves accurate for a user, the weight of the historical analysis will increase for the next round. Conversely, if a categorical analysis performs poorly, Its weight will decrease in the computation of the final confidence interval.Each of these analysis dives into a very specific type of analysis and returns a confidence interval of a purchase being made based on that specific category. Within these categorical analysis, we develop learned weights for different factors put into said analysis that will adjust over time. </p>
+        <li>Historical Analysis: IN PROGRESS</li>
+            <ul>
+                <li>Frequency: annually, monthly, weekly</li>
+                <li>Weekly timeline: end of week versus beginning of week purchases</li>
+            </ul>
+        <li>Geographical Analysis: IN PROGRESS</li>
+            <ul>
+                <li>Distance to location</li>
+                <li>Number of locations in average radius of transactions</li>
+            </ul>
+        <li>Comparative Analysis: TODO</li>
+            <ul>
+                <li>This analysis seeks to discover the relationships between stores in the eyes of a user, and leverage that to contribute to the overall analysis. For example: if a user often goes to the same breakfast placve after buying a coffee from starbucks, that relationship/pattern should be recognized from this analysis. </li>
+            </ul>
+        <br><br><br>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+            
+        </script>
     </body>
+
 </html>
