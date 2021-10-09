@@ -1,5 +1,125 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .home {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px; 
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    
+    html, body {
+        height: 100%;
+    }
+    
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: table;
+        text-align: center;
+    }
+    .parent > .child {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+</style>
+</head>
     <body>
-        <h1>bundl</h1>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="../">Home</a>
+          <a href="./fig.html">Fig- Software Developer</a>
+          <a href="">BundL - Cofounder</a>
+          <a href="./giftCardTracker.html">Gift Card Tracker</a>
+          <a href="./transactionPred.html">Transaction Predictions Algorithm</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+        <h1 style="text-align: center">BundL</h1>
+        <h2>Role:</h2>
+        <p style="font-size:25px">Co-founder and Lead Developer</p>
+        <h2>Summary</h2>
+        <p style="font-size: 25px">BundL is a centralized loyalty rewards wallet that integrates directly into your preferred payment method. BundL has two components: a user facing mobile application and a business facing dashboard. On the dashboard, merchants can sign up and create a loyalty rewards program from scratch with components such as a points to dollar ratio, thresholds/rewards, coupons, and timed campaigns. On the user side, once you link your preffered payment method to BundL (via Plaid Link), your rewards will be directly pushed to your linked payment form as you spend, and tracked in the mobile application, allowing you to maximize the usage of your points. </p>
+        
+        <h2>Experience:</h2>
+        <p style="font-size: 25px">Being one of the three cofounders of BundL, I  was responsible for:</p>
+        <li>Building a RESTful API with endpoints to add and remove funds from a merchant account and into a user account</li>
+        <li>Co-developing the beta of our mobile application in Swift</li>
+        <li>Leading the development and managing a team of 5 engineers to build a business facing dashboard in React</li>
+        <li>Meeting with merchants and users to discuss pain points in the loyalty rewards space</li>
+        
+        <h2>Final Product:</h2>
+        <li><h3>Mobile APP:</h3></li>
+        
+        <img src="../resources/bundLCard.PNG">
+        <img src="../resources/bundL_home.jpeg">
+        <img src="../resources/bundL_graph.jpeg">
+
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+            
+        </script>
     </body>
+
 </html>
