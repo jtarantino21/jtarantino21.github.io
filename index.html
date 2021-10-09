@@ -1,7 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html> 
+    <head>
+        <style>
+            .column {
+            float: left;
+            width: 50%;
+            }
+
+            .row:after {
+            content: "";
+            display: table;
+            clear: both;
+    }
+        </style>
+    </head>
     <body>
-        <img src="./resources/profile.jpeg" width="200" height="200">
+        <!-- Header -->
         <h1 style="text-align: center">Jack Tarantino</h1>
         <h2 style="text-align: center">Johns Hopkins University '22</h2>
         <h2 style="text-align: center">Whiting School of Engineering</h2>
@@ -11,7 +25,47 @@
         <p style="font-size:30px; text-align: center">Hi there!</p>
         
         <p style="font-size:25px; text-align: center">I'd like to use this website to tell you a bit more about my projects, and dive into some more detail beyond my resume. <br><br> Click on one of my experiences/projects below to learn more</p>
-        <br>
+        <br><br><br><br>
+        
+        <!-- Experiences Section -->
+        <h1 style="text-align: center">Experience</h1>
+        
+        <div class="row">
+            <div class="column" style="text-align: center">
+                <h1>Fig-Food is Good</h1>
+                <h2>Software Engineer</h2>
+                <img src="./resources/fig_logo copy.png"> <br>
+                <button>Click to learn more!</button>
+            </div>
+            <div class="column" style="text-align: center">
+                <h1>BundL</h1>
+                <h2>Lead Engineer and Co-Founder</h2>
+                <img src="./resources/logo copy.png"> <br>
+                <button>Click to learn more!</button>
+            </div>
+        </div>
+        <br><br>
+        
+        <!-- Projects Section -->
+        <h1 style="text-align: center">Projects Outside of School</h1>
+        <br><br><br>
+        
+        <div class="row">
+            <div class="column" style="text-align: center">
+                <h1>Gift Card Tracker</h1>
+                <h2>Software Engineer</h2>
+                <br>
+                <button>Click to learn more!</button>
+            </div>
+            <div class="column" style="text-align: center">
+                <h1>Transaction Prediction Algorithm</h1>
+                <h2>Software Engineer</h2>
+                <br>
+                <button>Click to learn more!</button>
+            </div>
+        </div>
+        
+        <br><br><br>
         //TODO: make each experience a button and then click to each of them
         <h1 style="text-align: center">Fig-Food Is Good</h1>
         <h2>Role:</h2>
