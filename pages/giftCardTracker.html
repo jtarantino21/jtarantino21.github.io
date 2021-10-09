@@ -76,10 +76,8 @@
     .column {
         float: left;
         width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
+
     .row:after {
         content: "";
         display: table;
@@ -110,9 +108,8 @@
         <p style='font-size: 20px'>Apologies for the UI components, I mostly cared about functionality for this project.</p>
 
         <div class="row">
-            <div class="column"><img src="../resources/giftCardHome.PNG" height="550" width="300"></div>
-            <div class="column"><video controls height="550" width="300"><source src="../resources/scan.mp4" type="video/mp4"></video>
-            </div>
+            <div class="column"><div style="display: flex; justify-content: center;"><img src="../resources/giftCardHome.PNG" height="550" width="300"></div></div>
+            <div class="column"><div style="display: flex; justify-content: center;"><video controls height="550" width="300"><source src="../resources/scan.mp4" type="video/mp4"></video></div></div>
         </div>
         <br><br><br>
 
