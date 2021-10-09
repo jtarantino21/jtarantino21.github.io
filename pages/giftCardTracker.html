@@ -72,6 +72,19 @@
         display: table-cell;
         vertical-align: middle;
     }
+
+    .column {
+        float: left;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
     
 </style>
 </head>
@@ -96,8 +109,11 @@
         <h2>Final Product:</h2>
         <p style='font-size: 20px'>Apologies for the UI components, I mostly cared about functionality for this project.</p>
 
-        <img src="../resources/giftCardHome.PNG" height="550" width="300">
-        <video controls height="550" width="300"><source src="../resources/scan.mp4" type="video/mp4"></video>
+        <div class="row">
+            <div class="column"><img src="../resources/giftCardHome.PNG" height="550" width="300"></div>
+            <div class="column"><video controls height="550" width="300"><source src="../resources/scan.mp4" type="video/mp4"></video>
+            </div>
+        </div>
         <br><br><br>
 
         <script>
