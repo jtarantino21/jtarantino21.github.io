@@ -78,6 +78,17 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    .column {
+        float: left;
+        width: 33%;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
     
 </style>
 </head>
@@ -112,9 +123,12 @@
         <h2>Final Product:</h2>
         <li style="font-size: 25px">Mobile App:</li>
         
-        <img src="../resources/bundLCard.PNG" height="550" width="300">
-        <img src="../resources/bundL_home.jpeg" height="550" width="300">
-        <img src="../resources/bundL_graph.jpeg" height="550" width="300">
+        <div class="row">
+            <div class="column"><div style="display: flex; justify-content: center;"><img src="../resources/bundLCard.PNG" height="550" width="300"></div></div>
+            <div class="column"><div style="display: flex; justify-content: center;"><img src="../resources/bundL_home.jpeg" height="550" width="300"></div></div>
+            <div class="column"><div style="display: flex; justify-content: center;"><img src="../resources/bundL_graph.jpeg" height="550" width="300"></div></div>
+        </div>
+        
 
 
         <script>
