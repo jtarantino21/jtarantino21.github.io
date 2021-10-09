@@ -1,156 +1,118 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <style>
-            .column {
-            float: left;
-            width: 50%;
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .home {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px; 
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    
+    html, body {
+        height: 100%;
+    }
+    
+    .parent {
+        width: 100%;
+        height: 100%;
+        display: table;
+        text-align: center;
+    }
+    .parent > .child {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+</style>
+</head>
+    <body>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#" onclick="openFig()">Fig- Software Developer</a>
+          <a href="#">BundL - Cofounder</a>
+          <a href="#">Gift Card Tracker</a>
+          <a href="#">Transaction Predictions Algorithm</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <section class="parent">
+            <div class="child">
+                <h1 style="font-size: 50px">Welcome!</h1>
+                <h1>Hi, I'm Jack. Thanks for taking the time to look into some of my experiences.<br>Use the side navigation bar to see more on some of my experiences and current projects.</h1>
+                <br><br><br>
+                <h3 style="text-align: center;">Jack Tarantino</h3>
+                <h3 style="text-align: center;">Johns Hopkins University '22</h3>
+                <h3 style="text-align: center;">Whiting School of Engineering</h3>
+                <h3 style="text-align: center;">Computer Science</h3>
+                <img src="screenshots/quick-edit.png" height="300" width="250">
+                <br><br><br>
+            </div>
+        </section>
+
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
             }
 
-            .row:after {
-            content: "";
-            display: table;
-            clear: both;
-    }
-        </style>
-    </head>
-    <body>
-        <!-- Header -->
-        <h1 style="text-align: center">Jack Tarantino</h1>
-        <h2 style="text-align: center">Johns Hopkins University '22</h2>
-        <h2 style="text-align: center">Whiting School of Engineering</h2>
-        <h2 style="text-align: center">Computer Science</h2>
-        <hr>
-        <br>
-        <p style="font-size:30px; text-align: center">Hi there!</p>
-        
-        <p style="font-size:25px; text-align: center">I'd like to use this website to tell you a bit more about my projects, and dive into some more detail beyond my resume. <br><br> Click on one of my experiences/projects below to learn more</p>
-        <br><br><br><br>
-        
-        <!-- Experiences Section -->
-        <h1 style="text-align: center">Experience</h1>
-        
-        <div class="row">
-            <div class="column" style="text-align: center">
-                <h1>Fig-Food is Good</h1>
-                <h2>Software Engineer</h2>
-                <img src="./resources/fig_logo copy.png"> <br>
-                <button>Click to learn more!</button>
-            </div>
-            <div class="column" style="text-align: center">
-                <h1>BundL</h1>
-                <h2>Lead Engineer and Co-Founder</h2>
-                <img src="./resources/logo copy.png" width="400" height="100"> <br>
-                <button>Click to learn more!</button>
-            </div>
-        </div>
-        <br><br>
-        
-        <!-- Projects Section -->
-        <h1 style="text-align: center">Projects Outside of School</h1>
-        <br><br><br>
-        
-        <div class="row">
-            <div class="column" style="text-align: center">
-                <h1>Gift Card Tracker</h1>
-                <h2>Software Engineer</h2>
-                <br>
-                <button>Click to learn more!</button>
-            </div>
-            <div class="column" style="text-align: center">
-                <h1>Transaction Prediction Algorithm</h1>
-                <h2>Software Engineer</h2>
-                <br>
-                <button>Click to learn more!</button>
-            </div>
-        </div>
-        
-        <br><br><br>
-        //TODO: make each experience a button and then click to each of them
-        <h1 style="text-align: center">Fig-Food Is Good</h1>
-        <h2>Role:</h2>
-        <p style="font-size:25px">Software Developer</p>
-        <h2>Summary</h2>
-        <p style="font-size: 25px">Fig is a Sequoia backed startup that's mission is to help people with dietary restrictions shop with greater ease. Diets are extremely complex, and with Fig's mobile app, users can create a deitary profile and simply scan items in the store to determine whether or not the food they are looking at fits their Fig! Their user base at the time of my internship was approximately 30,000 users.</p>
-        
-        <h2>Experience:</h2>
-        <p style="font-size: 25px">Fig approached me with an issue. They wanted to make their mobile app more proactive in engaging with their users as the Fig experience was entirely passive at the time. My job was to tackle this problem end to end. A high level summary of the summer is as follows:</p><br>
-        <h2 style="text-align: center">User Interviews &#8594 Solution: Food Recommendations Algorithm &#8594 Develop MVP &#8594 Alpha Test &#8594 Iteration 2 &#8594 Beta Test &#8594 Roll-out</h2>
-        
-        <h2>Final Product:</h2>
-        <p style="font-size: 25px">An algorithm to determine, based on a users diet, what type of food items they would be interested in as well as advanced sql queries to return the top food items matching the optimal description</p>
-        <p style="font-size: 25px">An API endpoint leveraging this algorithm to return 10 unique food recommendations based on a users diet.</p>
-        <p style="font-size: 25px">Route: //TODO</p>
-        <p style="font-size: 25px">A front end UI component to deliver these recommendations to the user</p>
-        <p style="font-size: 25px">Front-End Component/Delivery:</p>
-        <img src="./resources/figProd.png">
-        
-        <hr>
-        <br><br><br>
-        <h1 style="text-align: center">BundL</h1>
-        <h2>Role:</h2>
-        <p style="font-size:25px">Co-founder and Lead Developer</p>
-        <h2>Summary</h2>
-        <p style="font-size: 25px">BundL is a centralized loyalty rewards wallet that integrates directly into your preferred payment method. BundL has two components: a user facing mobile application and a business facing dashboard. On the dashboard, merchants can sign up and create a loyalty rewards program from scratch with components such as a points to dollar ratio, thresholds/rewards, coupons, and timed campaigns. On the user side, once you link your preffered payment method to BundL (via Plaid Link), your rewards will be directly pushed to your linked payment form as you spend, and tracked in the mobile application, allowing you to maximize the usage of your points. </p>
-        
-        <h2>Experience:</h2>
-        <p style="font-size: 25px">Being one of the three cofounders of BundL, I  was responsible for:</p>
-        <li>Building a RESTful API with endpoints to add and remove funds from a merchant account and into a user account</li>
-        <li>Co-developing the beta of our mobile application in Swift</li>
-        <li>Leading the development and managing a team of 5 engineers to build a business facing dashboard in React</li>
-        <li>Meeting with merchants and users to discuss pain points in the loyalty rewards space</li>
-        
-        <h2>Final Product:</h2>
-        <h3>Mobile APP:</h3>
-        //TODO Add images
-        <h3>Business Facing Dashboard</h3>
-        //TODO Add images
-        
-        <br><br>
-        <hr>
-        <h1 style="text-align: center">Transaction Predictions Algorithm</h1>
-        <h2>Role:</h2>
-        <p style="font-size:25px">Co-Developer</p>
-        <h2>Summary</h2>
-        <p style="font-size: 25px">Note: this algorithm is still a work in progress, but it's been incredibly fun writing so I wanted to include it as I worked on it. <br><br> The goal of this algorithm is to answer the question: for a given user on a given day, what is the percent chance of them making a transaction at location X.</p>
-        
-        <h2>Shape: </h2>
-        <p style="font-size: 25px">The algorithm predicts a confidence level that a user will make a transaction at location Y by computing the weighted average of categorical analysis.These categories weights adjust and learn depending on the outcome of the algorithms results. Meaning if a historical analysis proves accurate for a user, the weight of the historical analysis will increase for the next round. Conversely, if a categorical analysis performs poorly, Its weight will decrease in the computation of the final confidence interval.Each of these analysis dives into a very specific type of analysis and returns a confidence interval of a purchase being made based on that specific category. Within these categorical analysis, we develop learned weights for different factors put into said analysis that will adjust over time. </p>
-        <li>Historical Analysis: IN PROGRESS</li>
-            <ul>
-                <li>Frequency: annually, monthly, weekly</li>
-                <li>Weekly timeline: end of week versus beginning of week purchases</li>
-            </ul>
-        <li>Geographical Analysis: IN PROGRESS</li>
-            <ul>
-                <li>Distance to location</li>
-                <li>Number of locations in average radius of transactions</li>
-            </ul>
-        <li>Comparative Analysis: TODO</li>
-            <ul>
-                <li>This analysis seeks to discover the relationships between stores in the eyes of a user, and leverage that to contribute to the overall analysis. For example: if a user often goes to the same breakfast placve after buying a coffee from starbucks, that relationship/pattern should be recognized from this analysis. </li>
-            </ul>
-        
-        <br><br><br>
-        <hr>
-        
-        <h1 style="text-align: center">Gift Card Tracker</h1>
-        <h2>Reason:</h2>
-        <p style="font-size:25px">Simply, I had 85 gift cards and kept losing track of their balances. So I built a mobile app that allowed me to scan each of them into a wallet so that I could keep track of their balances more easily as I spent. The home page compiled balances I owned to each company, and then you could click further into the company section to view each of my cards and their values.</p>
-        
-        <h2>Final Product:</h2>
-        <p style='font-size: 20px'>Apologies for the UI design, I mostly cared about functionality for this project.</p>
-        //TODO Images
-        
-
-
-        
-        
-        
-        
-        
-        <br><br><br><br><br><br><br>
-        
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+            
+        </script>
+   
     </body>
-    
-</html>
+</html> 
